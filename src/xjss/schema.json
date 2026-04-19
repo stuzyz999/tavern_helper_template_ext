@@ -535,6 +535,151 @@
       "default": "",
       "type": "string"
     },
+    "$系统积分": {
+      "default": 0,
+      "type": "number"
+    },
+    "$系统任务": {
+      "default": "",
+      "type": "string"
+    },
+    "$系统因果等级": {
+      "default": "清明",
+      "type": "string",
+      "enum": [
+        "清明",
+        "微染",
+        "业火"
+      ]
+    },
+    "$系统成就": {
+      "default": {},
+      "type": "object",
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "家族": {
+      "default": {
+        "总人口": 0,
+        "道侣": {}
+      },
+      "type": "object",
+      "properties": {
+        "总人口": {
+          "default": 0,
+          "type": "number"
+        },
+        "道侣": {
+          "default": {},
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {
+            "default": {
+              "关系": "",
+              "储物戒": "",
+              "是否受孕": false,
+              "已诞子嗣数": 0,
+              "子嗣": {}
+            },
+            "type": "object",
+            "properties": {
+              "关系": {
+                "default": "",
+                "type": "string"
+              },
+              "储物戒": {
+                "default": "",
+                "type": "string"
+              },
+              "是否受孕": {
+                "default": false,
+                "type": "boolean"
+              },
+              "已诞子嗣数": {
+                "default": 0,
+                "type": "number"
+              },
+              "子嗣": {
+                "default": {},
+                "type": "object",
+                "propertyNames": {
+                  "type": "string"
+                },
+                "additionalProperties": {
+                  "default": {},
+                  "type": "object",
+                  "properties": {
+                    "关系": {
+                      "$ref": "#/$defs/__schema2"
+                    },
+                    "储物戒": {
+                      "$ref": "#/$defs/__schema3"
+                    },
+                    "年龄段": {
+                      "$ref": "#/$defs/__schema4"
+                    },
+                    "升格道侣": {
+                      "$ref": "#/$defs/__schema5"
+                    },
+                    "是否受孕": {
+                      "$ref": "#/$defs/__schema6"
+                    },
+                    "已诞子嗣数": {
+                      "$ref": "#/$defs/__schema7"
+                    },
+                    "子嗣": {
+                      "default": {},
+                      "type": "object",
+                      "propertyNames": {
+                        "type": "string"
+                      },
+                      "additionalProperties": {
+                        "default": {},
+                        "type": "object",
+                        "properties": {
+                          "关系": {
+                            "$ref": "#/$defs/__schema2"
+                          },
+                          "储物戒": {
+                            "$ref": "#/$defs/__schema3"
+                          },
+                          "年龄段": {
+                            "$ref": "#/$defs/__schema4"
+                          },
+                          "升格道侣": {
+                            "$ref": "#/$defs/__schema5"
+                          },
+                          "是否受孕": {
+                            "$ref": "#/$defs/__schema6"
+                          },
+                          "已诞子嗣数": {
+                            "$ref": "#/$defs/__schema7"
+                          },
+                          "子嗣": {
+                            "default": {},
+                            "type": "object",
+                            "propertyNames": {
+                              "type": "string"
+                            },
+                            "additionalProperties": {}
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "$炼丹_熟练度": {
       "default": 0,
       "type": "number"
@@ -624,6 +769,36 @@
     "__schema1": {
       "default": "",
       "type": "string"
+    },
+    "__schema2": {
+      "default": "",
+      "type": "string"
+    },
+    "__schema3": {
+      "default": "",
+      "type": "string"
+    },
+    "__schema4": {
+      "default": "婴儿",
+      "type": "string",
+      "enum": [
+        "婴儿",
+        "幼女",
+        "少女",
+        "成年"
+      ]
+    },
+    "__schema5": {
+      "default": false,
+      "type": "boolean"
+    },
+    "__schema6": {
+      "default": false,
+      "type": "boolean"
+    },
+    "__schema7": {
+      "default": 0,
+      "type": "number"
     }
   }
 }
