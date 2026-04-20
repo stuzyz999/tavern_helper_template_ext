@@ -7,10 +7,14 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "dump": "node dump_schema.ts",
+<<<<<<< HEAD
     "sync": "node tavern_sync.mjs",
     "release": "node release.mjs",
     "release:minor": "node release.mjs minor",
     "release:major": "node release.mjs major"
+=======
+    "sync": "node tavern_sync.mjs"
+>>>>>>> 5427fc4312cb5983ca9885b5f500c6082deaadf5
   },
   "browserslist": [
     "defaults and partially supports es6-module"
